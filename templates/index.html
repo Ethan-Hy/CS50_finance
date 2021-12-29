@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Portfolio
+{% endblock %}
+
+{% block main %}
+    
+    <h2>Portfolio</h2>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Symbol</th>
+                <th>Name</th>
+                <th>Shares</th>
+                <th>Price</th>
+                <th>TOTAL</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Loop through account data to display portfolio-->
+            {% for account in accounts %}
+                <tr>
+                    <td>{{account.symbol}}</td>
+                    <td>{{account.name}}</td>
+                    <td>{{account.shares}}</td>
+                    <td>{{account.price | usd}}</td>
+                    <td>{{account.total | usd}}</td>
+                </tr>
+            {% endfor %}
+            <tr>
+                <td>CASH</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>{{cash | usd}}</td>
+            </tr>
+            <tr>
+                <td>OVERALL</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><strong>{{total | usd}}</strong></td>
+            </tr>
+        </tbody>
+    </table>
+    
+    
+    
+{% endblock %}
