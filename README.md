@@ -2,7 +2,7 @@
 #### Description:
 https://cs50.harvard.edu/x/2021/psets/9/finance/
 
-This is my implementation of the problem set finance for CS50 where we implement a website to create an account, log in, buy and sell stocks. 
+This is my implementation of the problem set finance for CS50 where we implement a website to create an account, log in, buy and sell stocks. An initial skeleton for the website is first provided but the rest is my own implementation.
 
 The tech stack used is Python, Flask, Jinja, sqlight3, html, CSS.
 Instead of using the CS50 package I am using sqlight3 and this website will use flask to run locally.
